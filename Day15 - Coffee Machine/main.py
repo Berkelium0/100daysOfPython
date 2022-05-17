@@ -58,8 +58,7 @@ while selection != "off":
     selection = input("What would you like? (espresso/latte/cappuccino): ")
     if selection == "report":
         report()
-    else   :
+    elif selection != "off":
         canDo = isAvailable(selection)
         if canDo:
             getMoney(selection)
-
