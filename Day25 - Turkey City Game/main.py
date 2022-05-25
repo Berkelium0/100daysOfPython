@@ -74,9 +74,6 @@ while len(guessed_cities) < 81:
         correct_city(answer_city)
         guessed_cities.append(answer_city)
 
-cities_missed = []
-for city in normalized_data.city.tolist():
-    if city not in guessed_cities:
-        cities_missed.append(city)
+cities_missed = [city for city in normalized_data.city.tolist() if city not in guessed_cities]
 
 pandas.DataFrame(cities_missed).to_csv("cities_to_learn.csv")
