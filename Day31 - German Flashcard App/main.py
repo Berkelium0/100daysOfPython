@@ -45,8 +45,8 @@ window.config(padx=50, pady=50, bg=BACKGROUND_COLOR)
 
 # Flashcard
 flashcard = Canvas(width=800, height=526, bg=BACKGROUND_COLOR, highlightthickness=0)
-CARD_BACK_IMAGE = PhotoImage(file="./images/card_back.png")
-CARD_FRONT_IMAGE = PhotoImage(file="./images/card_front.png")
+CARD_BACK_IMAGE = PhotoImage(file="images/card_back.png")
+CARD_FRONT_IMAGE = PhotoImage(file="images/card_front.png")
 
 image = flashcard.create_image(400, 263, image=CARD_FRONT_IMAGE)
 title = flashcard.create_text(400, 150, text="", font=("Ariel", 40, "italic"))
@@ -54,8 +54,8 @@ word = flashcard.create_text(400, 263, text="", font=("Ariel", 60, "bold"))
 flashcard.grid(row=0, column=0, columnspan=2)
 
 # Buttons
-CORRECT_BUTTON_IMAGE = PhotoImage(file="./images/right.png")
-WRONG_BUTTON_IMAGE = PhotoImage(file="./images/wrong.png")
+CORRECT_BUTTON_IMAGE = PhotoImage(file="images/right.png")
+WRONG_BUTTON_IMAGE = PhotoImage(file="images/wrong.png")
 correct_button = Button(image=CORRECT_BUTTON_IMAGE, highlightthickness=0, command=correct_button_press)
 wrong_button = Button(image=WRONG_BUTTON_IMAGE, highlightthickness=0, command=wrong_button_press)
 correct_button.grid(row=1, column=1)
