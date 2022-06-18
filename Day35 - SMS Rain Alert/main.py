@@ -3,7 +3,7 @@ import os
 from twilio.rest import Client
 
 account_sid = 'AC8fe855147f98243b60c131449a3245eb'
-auth_token = '8ec04f87127cfb7dc70985f44b8657ac'
+auth_token = 'ee5b3b883de989c7be53017c115c8178'
 
 parameters = {"key": "c3aea67e4ad244a8a16122601221006", "q": "Ankara", "days": 1, "aqi": "no", "alerts": "no"}
 response = requests.get("http://api.weatherapi.com/v1/forecast.json", params=parameters)
@@ -19,7 +19,7 @@ if will_rain:
     client = Client(account_sid, auth_token)
     message = client.messages.create(
         body="Its rainy today, Dont forget your umbrella!☂",
-        from_="+19124937864",
+        from_="+19205261991",
         to="+905357992024"
     )
     print(message.status)
